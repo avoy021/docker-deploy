@@ -53,7 +53,7 @@ connectDB();
 
 
 app.get('/api' , (req,res) => {
-    res.send('Helloowewq')
+    res.send('Hello')
     console.log('Server ran')
 })
 

@@ -3,3 +3,4 @@ Dockerfile
 docker-compose*
 .env
 .git*
+install-docker-ubuntu.txt
