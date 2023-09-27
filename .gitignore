@@ -1,4 +1,3 @@
 node_modules
 .env
 install-docker-ubuntu.txt
-docker-compose.dev.yml
