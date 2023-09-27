@@ -17,8 +17,8 @@ services :
   mongo:
     image: mongo
     environment:
-      - MONGO_INITDB_ROOT_USERNAME: 'avoy'
-      - MONGO_INITDB_ROOT_PASSWORD: 'avoy1234'
+      MONGO_INITDB_ROOT_USERNAME: avoy
+      MONGO_INITDB_ROOT_PASSWORD: avoy1234
     volumes:
       - mongo-db:/data/db
 volumes: 
