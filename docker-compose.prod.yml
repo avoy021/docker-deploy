@@ -11,3 +11,12 @@ services :
     environment:
       - NODE_ENV=production
     command: npm run start 
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongo-db:/data/db
+volumes: 
+  mongo-db:
