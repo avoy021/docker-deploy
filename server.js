@@ -7,7 +7,7 @@ const redis = require('redis');
 const RedisStore = require('connect-redis').default
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 5000;
 
 let redisClient = redis.createClient({
     url: 'redis://redis:6379'
@@ -40,10 +40,10 @@ app.use('/api/blog',require('./routes/blogRoute'));
 
 const connectDB = async() => {
     try {
-        // const conn = await mongoose.connect("mongodb://avoy:avoy123@192.168.192.2:27017/?authSource=admin");
+        const conn = await mongoose.connect("mongodb://avoy:avoy1234@mongo:27017/?authSource=admin");
         // here mongo refers to the container name mongo which we gave in docker compose file while defining it
         // const conn = await mongoose.connect(process.env.MONGO_URI);
-        const conn = await mongoose.connect(${MONGO_URI});
+        // const conn = await mongoose.connect(${MONGO_URI});
         // console.log('Success');
         console.log('Success');
     } catch (error) {
