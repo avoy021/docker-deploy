@@ -4,6 +4,7 @@ services :
     ports:
       - "80:80"
   app1:
+    image: avoy021/test-app1
     build:
       context: .
       args:

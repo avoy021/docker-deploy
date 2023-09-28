@@ -36,14 +36,14 @@ app.use(session({
 app.use('/api/user',require('./routes/userRoute'));
 app.use('/api/blog',require('./routes/blogRoute'));
 
-const MONGO_URI = `mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_USERNAME}@mongo:27017/?authSource=admin`
+//const MONGO_URI = `mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_USERNAME}@mongo:27017/?authSource=admin`
 
 
 const connectDB = async() => {
     try {
-        // const conn = await mongoose.connect("mongodb://avoy:avoy1234@mongo:27017/?authSource=admin");
+        const conn = await mongoose.connect("mongodb://avoy:avoy1234@mongo:27017/?authSource=admin");
         // here mongo refers to the container name mongo which we gave in docker compose file while defining it
-        const conn = await mongoose.connect(MONGO_URI);
+        // const conn = await mongoose.connect(MONGO_URI);
         // const conn = await mongoose.connect(${MONGO_URI});
         // console.log('Success');
         console.log('Success');
