@@ -42,7 +42,8 @@ const connectDB = async() => {
     try {
         // const conn = await mongoose.connect("mongodb://avoy:avoy123@192.168.192.2:27017/?authSource=admin");
         // here mongo refers to the container name mongo which we gave in docker compose file while defining it
-        const conn = await mongoose.connect(process.env.MONGO_URI);
+        // const conn = await mongoose.connect(process.env.MONGO_URI);
+        const conn = await mongoose.connect(${MONGO_URI});
         // console.log('Success');
         console.log('Success');
     } catch (error) {
