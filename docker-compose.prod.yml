@@ -9,7 +9,7 @@ services :
       args:
         NODE_ENV: production
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=${NODE_ENV}
     command: npm run start 
   mongo:
     image: mongo
